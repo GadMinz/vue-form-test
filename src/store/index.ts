@@ -1,4 +1,4 @@
-import { createLogger, createStore } from "vuex";
+import { createStore } from "vuex";
 import modals from "@/store/modules/modals";
 import cities from "@/store/modules/cities";
 import type { IModalsState } from "@/store/modules/modals";
@@ -14,6 +14,5 @@ export const store = createStore({
     modals,
     cities,
   },
-  strict: true,
-  plugins: [createLogger()],
+  strict: true
 });
