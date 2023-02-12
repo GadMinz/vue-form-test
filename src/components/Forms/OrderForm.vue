@@ -53,7 +53,7 @@ const submitForm = async () => {
         placeholder="Иван Иванов"
         id="name"
         required
-        :error="v$.name.$error ? v$.name.$errors[0].$message : ''"
+        :error="v$.name.$error ? v$.name.$errors[0].$message + '' : ''"
       />
       <BaseInput
         v-model:value="formData.phone"
@@ -62,7 +62,7 @@ const submitForm = async () => {
         placeholder="+7 (___) ___-__-__"
         id="phone"
         required
-        :error="v$.phone.$error ? v$.phone.$errors[0].$message : ''"
+        :error="v$.phone.$error ? v$.phone.$errors[0].$message + '' : ''"
       />
       <BaseInput
         v-model:value="formData.email"
@@ -71,7 +71,7 @@ const submitForm = async () => {
         placeholder="you@example.com"
         id="email"
         required
-        :error="v$.email.$error ? v$.email.$errors[0].$message : ''"
+        :error="v$.email.$error ? v$.email.$errors[0].$message + '' : ''"
       />
       <label id="city">
         Город*
